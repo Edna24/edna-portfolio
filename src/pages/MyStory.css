@@ -1,0 +1,677 @@
+
+/* ——— My Story: editorial page ——— */
+
+.my-story {
+    --story-ink: #091a38;
+    --story-blue: #2858b8;
+    --story-muted: #667085;
+    --story-line: #dce2eb;
+    --story-paper: #ffffff;
+    background: var(--story-paper);
+    color: var(--story-ink);
+    min-height: 100vh;
+  }
+  
+  .my-story__hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(3rem, 8vw, 7rem);
+    background:
+      radial-gradient(
+        ellipse at 85% 10%,
+        rgba(49, 91, 172, 0.24),
+        transparent 42%
+      ),
+      var(--navy-900, #071a38);
+    color: #ffffff;
+  }
+  
+  .my-story__hero .container,
+  .my-story__article {
+    width: min(100% - 3rem, 70rem);
+    margin-inline: auto;
+  }
+  
+  .my-story__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: clamp(3rem, 8vw, 6rem);
+    color: #d9e3f5;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  
+  .my-story__back:hover {
+    color: #ffffff;
+  }
+  
+  .my-story__eyebrow,
+  .my-story__chapter-label {
+    margin: 0 0 1.25rem;
+    color: #a9c2f5;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  
+  .my-story__hero h1 {
+    max-width: 58rem;
+    margin: 0;
+    color: #ffffff;
+    font-family: var(--font-display, Georgia, serif);
+    font-size: clamp(3rem, 7.5vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 0.99;
+    text-wrap: balance;
+  }
+  
+  .my-story__subtitle {
+    max-width: 39rem;
+    margin: 1.75rem 0 0;
+    color: #d6dfef;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.8;
+  }
+  
+  .my-story__article {
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+  }
+  
+  
+/* =========================================
+   MY STORY — EDITORIAL OPENING
+   ========================================= */
+
+.my-story__opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  margin-block: clamp(2.5rem, 5vw, 4.5rem) clamp(5rem, 9vw, 7.5rem);
+}
+
+.my-story__opening-text {
+  max-width: 610px;
+}
+
+.my-story__opening-text .my-story__chapter-label {
+  margin-bottom: 1.5rem;
+  color: #526da8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.my-story__opening-text > p:not(.my-story__chapter-label) {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.02rem, 1.25vw, 1.13rem);
+  line-height: 1.95;
+  color: #3e4655;
+}
+
+.my-story__opening-text > p:last-child {
+  margin-bottom: 0;
+}
+
+.my-story__portrait {
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+  justify-self: end;
+}
+
+.my-story__portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 2px;
+}
+
+.my-story__portrait figcaption {
+  margin-top: 0.85rem;
+  color: #737d8d;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 760px) {
+  
+.my-story__opening {
+  align-items: start;
+}
+
+.my-story__opening-text {
+  max-width: 570px;
+  padding-top: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+
+  .my-story__opening-text .my-story__chapter-label {
+    margin-bottom: 1rem;
+  }
+
+  .my-story__opening-text > p:not(.my-story__chapter-label) {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .my-story__portrait {
+    max-width: 440px;
+    justify-self: start;
+  }
+
+  .my-story__portrait img {
+    aspect-ratio: 4 / 5;
+    object-position: center 28%;
+  }
+}
+
+  
+  .my-story__chapter {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding-block: clamp(3.5rem, 7vw, 6rem);
+    border-top: 1px solid var(--story-line);
+    scroll-margin-top: 2rem;
+  }
+  
+  .my-story__chapter h2 {
+    max-width: 43rem;
+    margin: 0 0 2rem;
+    color: var(--story-ink);
+    font-family: var(--font-display, Georgia, serif);
+    font-size: clamp(2.1rem, 5vw, 3.8rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  
+  .my-story__chapter > p:not(.my-story__chapter-label) {
+    margin: 0 0 1.5rem;
+    color: #465268;
+    font-size: 1rem;
+    line-height: 1.95;
+  }
+  
+  .my-story__milestones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 3rem;
+    border-top: 1px solid var(--story-line);
+    border-left: 1px solid var(--story-line);
+  }
+  
+  .my-story__milestones > div {
+    min-width: 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-right: 1px solid var(--story-line);
+    border-bottom: 1px solid var(--story-line);
+    transition: background 180ms ease;
+  }
+  
+  .my-story__milestones > div:hover {
+    background: #f5f8fd;
+  }
+  
+  .my-story__milestones span {
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--story-blue);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+  }
+  
+  .my-story__milestones h3 {
+    margin: 0 0 0.65rem;
+    color: var(--story-ink);
+    font-family: var(--font-display, Georgia, serif);
+    font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+    font-weight: 400;
+  }
+  
+  .my-story__milestones p {
+    margin: 0;
+    color: var(--story-muted);
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+  
+  .my-story__closing {
+    margin-top: clamp(3rem, 7vw, 6rem);
+    padding: clamp(2rem, 6vw, 5rem);
+    background: var(--story-ink);
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .my-story__closing > p {
+    margin: 0 0 1rem;
+    color: #b8caed;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  
+  .my-story__closing h2 {
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    color: #ffffff;
+    font-family: var(--font-display, Georgia, serif);
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+  }
+  
+  .my-story__home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-decoration-color: #8faee8;
+    text-underline-offset: 0.35em;
+  }
+  
+  .my-story__home-link:hover {
+    color: #b8caed;
+  }
+  
+  @media (max-width: 600px) {
+    .my-story__hero .container,
+    .my-story__article {
+      width: min(100% - 2rem, 70rem);
+    }
+  
+    .my-story__back {
+      margin-bottom: 3.5rem;
+    }
+  
+    .my-story__hero h1 {
+      font-size: clamp(2.8rem, 12vw, 4rem);
+      line-height: 1.03;
+    }
+  
+    .my-story__opening {
+      margin-bottom: 4rem;
+    }
+  
+    .my-story__opening p {
+      line-height: 1.75;
+    }
+  
+    .my-story__chapter {
+      padding-block: 3.5rem;
+    }
+  
+    .my-story__milestones {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  
+    .my-story__milestones span {
+      margin-bottom: 1.25rem;
+    }
+  
+    .my-story__closing {
+      padding: 2.25rem 1.25rem;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .my-story__back,
+    .my-story__milestones > div {
+      transition: none;
+    }
+  }
+  
+/* Editorial opening and story portrait */
+
+.my-story__opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.my-story__opening-text {
+  max-width: 620px;
+}
+
+.my-story__opening-text > p:not(.my-story__chapter-label) {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.9;
+}
+
+.my-story__portrait {
+  margin: 0;
+  width: 100%;
+  max-width: 460px;
+  justify-self: end;
+}
+
+.my-story__portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 2px;
+}
+
+.my-story__portrait figcaption {
+  margin-top: 0.8rem;
+  color: #68738a;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 700px) {
+  .my-story__opening {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .my-story__portrait {
+    max-width: 420px;
+    justify-self: start;
+  }
+}
+
+/* =========================================
+   MY STORY — CHAPTER RHYTHM
+   ========================================= */
+
+   .my-story__chapter {
+    max-width: 780px;
+    margin: 0 auto clamp(5rem, 10vw, 8rem);
+    padding-top: clamp(2rem, 4vw, 3rem);
+    border-top: 1px solid #e5e9f0;
+  }
+  
+  .my-story__chapter-label {
+    margin: 0 0 1rem;
+    color: #526da8;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  
+  .my-story__chapter h2 {
+    max-width: 700px;
+    margin: 0 0 1.75rem;
+    color: #14213a;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+  
+  .my-story__chapter > p:not(.my-story__chapter-label) {
+    max-width: 680px;
+    margin: 0 0 1.25rem;
+    color: #424b5b;
+    font-size: 1.04rem;
+    line-height: 1.9;
+  }
+  
+  .my-story__chapter > p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 760px) {
+    .my-story__chapter {
+      margin-bottom: 4.5rem;
+      padding-top: 1.75rem;
+    }
+  
+    .my-story__chapter h2 {
+      font-size: clamp(1.65rem, 7vw, 2.15rem);
+    }
+  
+    .my-story__chapter > p:not(.my-story__chapter-label) {
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+  }
+
+/* My Story — milestone journey */
+
+.my-story__milestones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 2.5rem;
+  border-top: 1px solid #e1e6ef;
+  border-left: 1px solid #e1e6ef;
+}
+
+.my-story__milestones > div {
+  min-width: 0;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border-right: 1px solid #e1e6ef;
+  border-bottom: 1px solid #e1e6ef;
+  transition: background-color 180ms ease;
+}
+
+.my-story__milestones > div:hover {
+  background-color: #f7f9fd;
+}
+
+.my-story__milestones span {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #526da8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.my-story__milestones h3 {
+  margin: 0 0 0.65rem;
+  color: #14213a;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.3;
+}
+
+.my-story__milestones p {
+  margin: 0;
+  color: #596477;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 560px) {
+  .my-story__milestones {
+    grid-template-columns: 1fr;
+  }
+
+  .my-story__milestones > div {
+    padding: 1.4rem;
+  }
+
+  .my-story__milestones span {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .my-story__milestones > div {
+    transition: none;
+  }
+}
+
+/* Milestone details — refined editorial treatment */
+
+.my-story__milestones > div {
+  position: relative;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.my-story__milestones span {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.my-story__milestones span::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #526da8;
+}
+
+.my-story__milestones h3 {
+  letter-spacing: -0.025em;
+}
+
+@media (hover: hover) {
+  .my-story__milestones > div:hover {
+    background-color: #f7f9fd;
+    box-shadow: inset 0 2px 0 #526da8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .my-story__milestones > div {
+    transition: none;
+  }
+}
+
+/* =========================================
+   MY STORY — FULL MANUSCRIPT
+   ========================================= */
+
+   .my-story__chapter-intro {
+    max-width: 680px;
+    margin: 0 0 2.5rem;
+    color: #424b5b;
+    font-size: 1.08rem;
+    line-height: 1.9;
+  }
+  
+  .my-story__subsection {
+    max-width: 720px;
+    margin-top: 3rem;
+  }
+  
+  .my-story__subsection h3 {
+    margin: 0 0 1rem;
+    color: #14213a;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+  
+  .my-story__subsection p,
+  .my-story__becoming > p:not(.my-story__chapter-label) {
+    margin: 0 0 1.25rem;
+    color: #424b5b;
+    font-size: 1.02rem;
+    line-height: 1.95;
+  }
+  
+  .my-story__subsection p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .my-story__statement {
+    max-width: 760px;
+    margin: 3rem 0;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    border-left: 3px solid #526da8;
+    color: #14213a;
+    font-family: inherit;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.8;
+  }
+  
+  .my-story__final-statement {
+    margin-top: 2rem !important;
+    color: #14213a !important;
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem) !important;
+    font-weight: 500;
+  }
+  
+  .my-story__final-line {
+    margin-top: 2.5rem !important;
+    color: #526da8 !important;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem) !important;
+    line-height: 1.4 !important;
+  }
+  
+  .my-story__signature {
+    margin-top: 2.5rem !important;
+    color: #14213a !important;
+    font-weight: 600;
+  }
+  
+  .my-story__signature span {
+    display: block;
+    margin-top: 0.45rem;
+    color: #737d8d;
+    font-size: 0.84rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
+  .my-story__closing {
+    margin-top: 5rem;
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    border-top: 1px solid #e1e6ef;
+    text-align: center;
+  }
+  
+  .my-story__closing > p {
+    color: #596477;
+    line-height: 1.8;
+  }
+  
+  .my-story__closing h2 {
+    margin: 0 0 1.5rem;
+    color: #14213a;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  
+  @media (max-width: 760px) {
+    .my-story__subsection {
+      margin-top: 2.5rem;
+    }
+  
+    .my-story__subsection p,
+    .my-story__becoming > p:not(.my-story__chapter-label) {
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+  
+    .my-story__statement {
+      margin-block: 2rem;
+      padding-left: 1rem;
+    }
+  
+    .my-story__closing {
+      margin-top: 3.5rem;
+    }
+  }
+  
